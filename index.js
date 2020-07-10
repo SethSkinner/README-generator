@@ -1,7 +1,10 @@
-const inquirer = require("inquirer");
-const fs = require("fs");
+//variable requiring inquirer for this file
+var inquirer = require("inquirer");
+//variable for fs to make things asynchronys 
+var fs = require("fs");
 
-const questions = [
+//arrays to hold prompt questions for user input 
+var prompts = [
   {
     type: "input",
     name: "title",
@@ -16,7 +19,7 @@ const questions = [
     type: "input",
     name: "contents",
     message:
-      "List the contents of your README.md? (start each list item with a space)",
+      "List the content of your README.md? (start each list item with a space)",
   },
   {
     type: "input",
@@ -25,7 +28,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "usage",
+    name: "userstory",
     message: "What is the use for your App?",
   },
   {
@@ -53,42 +56,51 @@ const questions = [
   },
   {
     type: "input",
-    name: "githubUsername",
+    name: "githubName",
     message: "What is your Git Hub username?",
   },
   {
     type: "input",
-    name: "githubRepo",
+    name: "githubRepoName",
     message: "What is the link to your Git Hub Repository?",
   },
 ];
 
-function init() {
-  inquirer.prompt(questions).then((data) => {
-    const contents = data.contents.split(" ").join("\n *  ");
+//function to start appending data from questions on the the readme file
+function Start() {
+  //starts asking prompted questions to user
+  inquirer.prompt(prompts).then((data) => {
+    //takes content input and splits it into seperate strings and then adds them to a new line
+    var contents = data.contents.split(" ").join("\n *  ");
 
+    //appends title into file page
     fs.appendFileSync("README.md", `# ${data.title} \n`);
-    fs.appendFileSync(
-      "README.md",
-      `## Description \n >${data.description}\n  `
-    );
-    fs.appendFileSync("README.md", `## Table of Contents \n ${contents} \n`);
-    fs.appendFileSync(
-      "README.md",
-      `## Installation \n ${data.installation} \n`
-    );
-    fs.appendFileSync("README.md", `## Usage \n ${data.usage} \n`);
+
+    //appends the users decription into the file page
+    fs.appendFileSync("README.md", `## Description of App: \n >${data.description}\n  `);
+
+    //appends the contents inputted by user into the file page
+    fs.appendFileSync("README.md", `## Table of contents: \n ${contents} \n`);
+
+    //appends installation instructions into the file page
+    fs.appendFileSync("README.md", `## Installation Information: \n ${data.installation} \n`);
+
+    //appends the user story into the file page
+    fs.appendFileSync("README.md", `## User Story: \n ${data.userstory} \n`);
+
+    //appends the license information into the file page
     fs.appendFileSync("README.md", `## License: ${data.license} \n`);
-    fs.appendFileSync(
-      "README.md",
-      `## Contributors \n ${data.contributors} \n`
-    );
-    fs.appendFileSync("README.md", `## Tests \n ${data.tests} \n`);
-    fs.appendFileSync(
-      "README.md",
-      `### Git Hub \n ${data.githubUsername} \n *  ${data.githubRepo} \n`
-    );
+
+    //appends the contributions into the file page
+    fs.appendFileSync("README.md", `## Contributions: \n ${data.contributors} \n`);
+
+    //appends the tests into the file page
+    fs.appendFileSync("README.md", `## Tests: \n ${data.tests} \n`);
+
+    //appends the github infomation of the user into the file page
+    fs.appendFileSync("README.md", `### Github Info: \n ${data.githubName} \n *  ${data.githubRepoName} \n` );
   });
 }
 
-init();
+//calling the start function to initialize the program
+Start();
