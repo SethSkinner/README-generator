@@ -21,5 +21,6 @@
  @SETHSKINNER 
  *  github.io/SethSkinner 
 ### Video & Screenshot
- link to video : <iframe src="https://drive.google.com/file/d/1qOXBXFfR9NHHEsOO6kELsZVyxY0igBsM/preview" width="640" height="480"></iframe>
+screenshot : ![image of my app](https://ibb.co/JmxtDRk)
+ link to video : "https://drive.google.com/file/d/1qOXBXFfR9NHHEsOO6kELsZVyxY0igBsM/preview"
  
