@@ -21,6 +21,9 @@
  @SETHSKINNER 
  *  github.io/SethSkinner 
 ### Video & Screenshot
-screenshot : ![image of my app](https://ibb.co/JmxtDRk)
+screenshot : [![2020-07-11-1.png](https://i.postimg.cc/6QvB1zYy/2020-07-11-1.png)](https://postimg.cc/nsn8XK8J))
+
+
+
  link to video : "https://drive.google.com/file/d/1qOXBXFfR9NHHEsOO6kELsZVyxY0igBsM/preview"
  
