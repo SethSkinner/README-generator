@@ -28,7 +28,7 @@
 
   ## Usage
 
-  The user will be able to use this application to make quick and effective readmes by answer a few simple questions about there project
+  The user will be able to use this application to make quick and effective readmes by answer a few simple questions about there project.
 
   ## License
 
@@ -49,3 +49,7 @@
   ## Github Name
 
   @SethSkinner
+  
+  ## Screenshot 
+  
+  [!imageofapp](https://drive.google.com/file/d/1z7Q3Axd-jqyYn_GfTiuAkfDYxlWlC6b1/view?usp=sharing)
