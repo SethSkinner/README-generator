@@ -91,14 +91,30 @@ const questions = [
 
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+const promptUser = () => {
 
-// function to initialize program
-function init() {
+    return inquirer.prompt(questions);
 
-}
+};
+
+async const init = () => {
+
+    try {
+
+        const answers = await promptUser();
+        const readme = await generate(answers);
+
+        fs.writeFile('ReadMe.md', readme);
+            console.log('ReadMe has been made.');
+        
+        } catch(err) {
+
+            console.log(err);
+
+        }
+
+    }
+
 
 // function call to initialize program
 init();
