@@ -78,7 +78,11 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  Send questions to ${data.questions}`;
+  Send questions to ${data.email}
+
+  ## Github Name
+
+  ${data.username}`;
 
 }
 
