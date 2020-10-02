@@ -105,7 +105,7 @@ async function init() {
         const answers = await promptUser();
         const readme = generate(answers);
 
-        fs.writeFile('ReadMe.md', readme);
+        await writeFileAsync('ReadMe.md', readme);
             console.log('ReadMe has been made.');
         
         } catch(err) {
