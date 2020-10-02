@@ -1,5 +1,5 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
+function generate(data) {
   
   let Badge = ''
 
@@ -86,4 +86,4 @@ function generateMarkdown(data) {
 
 }
 
-module.exports = generateMarkdown;
+module.exports = generate;

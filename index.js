@@ -4,6 +4,7 @@ const fs = require('fs');
 
 const generate = require('./utils/generateMarkdown');
 const util = require('util');
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
@@ -91,7 +92,7 @@ const questions = [
 
 ];
 
-const promptUser = () => {
+promptUser = () => {
 
     return inquirer.prompt(questions);
 
@@ -102,7 +103,7 @@ async function init() {
     try {
 
         const answers = await promptUser();
-        const readme = await generate(answers);
+        const readme = generate(answers);
 
         fs.writeFile('ReadMe.md', readme);
             console.log('ReadMe has been made.');

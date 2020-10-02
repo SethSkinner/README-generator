@@ -13,7 +13,9 @@
   },
   "homepage": "https://github.com/SethSkinner/README-generator",
   "dependencies": {
+    "axios": "^0.20.0",
     "fs": "0.0.1-security",
-    "inquirer": "^6.5.2"
+    "inquirer": "^6.5.2",
+    "util": "^0.12.3"
   }
 }
