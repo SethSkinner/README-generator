@@ -55,8 +55,30 @@ function generateMarkdown(data) {
   [Tests](#Tests)
 
   [Questions](#Questions)
-  
-  `
+
+  ## Installation
+
+  ${data.installation}
+
+  ## Usage
+
+  ${data.usage}
+
+  ## License
+
+  ${Badge}
+
+  ## Contributions
+
+  ${data.contributions}
+
+  ## Tests
+
+  ${data.test}
+
+  ## Questions
+
+  Send questions to ${data.questions}`;
 
 }
 
