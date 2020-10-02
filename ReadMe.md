@@ -52,4 +52,4 @@
   
   ## Screenshot 
   
-  [!imageofapp](https://drive.google.com/file/d/1z7Q3Axd-jqyYn_GfTiuAkfDYxlWlC6b1/view?usp=sharing)
+  [![2020-10-02-2.png](https://i.postimg.cc/qvyNCzZc/2020-10-02-2.png)](https://postimg.cc/sMfjkDz1)
