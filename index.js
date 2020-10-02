@@ -97,7 +97,7 @@ const promptUser = () => {
 
 };
 
-async const init = () => {
+async function init() {
 
     try {
 
